@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d20">
+<title>Un universo para Melany ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--pink:#ff9fc8;--rose:#f36eaa;--cream:#fff4f8;--muted:#e8cbd9;--glass:rgba(30,13,30,.58)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#100a17;color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}
+#backdrop{position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 70% 15%,#68405c 0%,transparent 38%),linear-gradient(135deg,#170d20,#291326 55%,#0e1322);background-size:cover;background-position:center;transform:scale(1.04);animation:drift 24s ease-in-out infinite alternate}
+#backdrop:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,7,17,.42),rgba(14,7,18,.72) 55%,#100a17 100%)}
+@keyframes drift{from{transform:scale(1.04) translate3d(-.5%,0,0)}to{transform:scale(1.13) translate3d(.7%,-.6%,0)}}
+#grain{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(#fff8 0.6px,transparent .7px);background-size:38px 38px;opacity:.13}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}.float-heart{position:absolute;bottom:-40px;color:#ffb8d4;opacity:0;animation:rise linear forwards}@keyframes rise{10%{opacity:.45}90%{opacity:.25}100%{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+.hidden{display:none!important}.screen{min-height:100vh;display:grid;place-items:center;padding:28px}
+.login-card,.glass{background:var(--glass);border:1px solid #ffffff24;backdrop-filter:blur(18px);box-shadow:0 25px 90px #0006;border-radius:26px}
+.login-card{width:min(470px,100%);padding:38px 30px;text-align:center}.tiny{letter-spacing:.23em;text-transform:uppercase;font-size:.68rem;color:#f5b5d1}.login-card h1{font:600 clamp(2.5rem,8vw,4rem) 'Playfair Display',serif;margin:12px 0}.login-card p{color:var(--muted);line-height:1.7}.field{text-align:left;margin:17px 0}.field label{display:block;font-size:.8rem;color:#f4c7da;margin-bottom:8px}.field input{width:100%;padding:14px 15px;border-radius:13px;border:1px solid #ffffff30;background:#160d1c;color:white;outline:none}.field input:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff9fc822}
+.primary{border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(110deg,#f477ad,#c77ce9);color:#260e21;font-weight:700;box-shadow:0 9px 28px #e66da944;transition:.2s}.primary:hover{transform:translateY(-2px);filter:brightness(1.08)}.error{color:#ffc1d7;min-height:22px;font-size:.85rem}
+main{display:none}.topbar{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:15px clamp(16px,5vw,60px);background:linear-gradient(#100a17bb,transparent);backdrop-filter:blur(5px)}.brand{font:600 1.2rem 'Playfair Display',serif}.brand span{color:var(--pink)}.nav{display:flex;gap:18px}.nav a{color:#fff;text-decoration:none;font-size:.78rem;opacity:.82}.nav a:hover{color:var(--pink)}.menu{display:none;background:none;color:white;border:0;font-size:1.4rem}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 22px 70px;position:relative}.hero-inner{max-width:800px}.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#ffd0e2}.hero h1{font:600 clamp(3.4rem,10vw,7.5rem)/.98 'Playfair Display',serif;margin:24px 0 18px;text-shadow:0 8px 35px #0008}.hero h1 em{color:#ffb2d0;font-weight:500}.hero p{max-width:560px;margin:0 auto;color:#f7dce8;line-height:1.8;font-size:1.04rem}.date-chip{display:inline-block;margin:27px 0 0;padding:10px 16px;border:1px solid #ffffff45;border-radius:99px;background:#ffffff12;font-size:.82rem}.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.18em;color:#f3cddd}
+section{padding:95px 22px;max-width:1100px;margin:auto}.section-head{text-align:center;margin-bottom:36px}.section-head .tiny{margin-bottom:10px}.section-head h2{font:600 clamp(2.2rem,6vw,3.8rem) 'Playfair Display',serif;margin:8px 0}.section-head p{color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7}.letter{max-width:760px;margin:auto;padding:clamp(25px,5vw,50px);line-height:1.95;color:#f9e8ef}.letter .salute{font:italic 1.8rem 'Playfair Display',serif;color:#ffb4d1}.letter p{margin:17px 0}.signature{font:italic 1.4rem 'Playfair Display',serif;color:#ffb4d1;text-align:right;margin-top:30px}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:32px auto}.count{padding:22px 10px;text-align:center}.count strong{display:block;font:600 clamp(2rem,6vw,3.3rem) 'Playfair Display',serif;color:#ffb5d2}.count span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#e9c9d8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.reason{padding:24px;min-height:160px}.reason b{font:600 1.25rem 'Playfair Display',serif;color:#ffc1d9}.reason p{color:#e9d3df;line-height:1.65;font-size:.9rem}.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.memory{min-height:190px;border-radius:18px;overflow:hidden;background:#29172a;border:1px solid #ffffff25;position:relative}.memory img{width:100%;height:100%;min-height:190px;object-fit:cover;display:block;transition:transform .6s}.memory:hover img{transform:scale(1.06)}.memory .placeholder{height:100%;min-height:190px;display:grid;place-items:center;color:#eac8d9;text-align:center;padding:15px;font-size:.85rem}.upload-panel{max-width:760px;margin:18px auto 0;padding:20px;text-align:center}.upload-panel p{font-size:.82rem;color:var(--muted);line-height:1.6}.upload-panel input{max-width:100%;color:#f7dce8}.music-list{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:780px;margin:auto}.track{padding:22px;display:flex;gap:16px;align-items:center}.disc{width:58px;height:58px;border-radius:50%;background:radial-gradient(circle,#21111d 0 13%,#f49abb 14% 18%,#783d66 19% 100%);box-shadow:0 0 30px #e879ad44;flex:none;animation:spin 8s linear infinite}.track:nth-child(2) .disc{background:radial-gradient(circle,#21111d 0 13%,#d6a6f0 14% 18%,#4c3974 19% 100%)}@keyframes spin{to{transform:rotate(360deg)}}.track h3{margin:0 0 5px;font:600 1.15rem 'Playfair Display',serif}.track p{margin:0;color:var(--muted);font-size:.8rem}.track a{display:inline-block;margin-top:10px;color:#ffc0d9;font-size:.8rem;text-decoration:none;border-bottom:1px solid #ffc0d9}
+.secret{max-width:650px;margin:auto;padding:30px;text-align:center}.lock{font-size:2.4rem}.secret h3{font:600 2rem 'Playfair Display',serif}.secret input{max-width:280px;text-align:center;letter-spacing:.12em}.reveal{padding:25px;margin-top:20px;background:#ffffff0d;border-radius:18px;color:#ffe1ed;line-height:1.8;font:italic 1.25rem 'Playfair Display',serif}
+footer{text-align:center;padding:45px 20px 65px;color:#d7b7c7;font-size:.8rem}footer strong{color:#ffb5d2}.small-note{font-size:.75rem;color:#cbaebe;text-align:center;margin-top:18px}
+@media(max-width:700px){.nav{display:none;position:absolute;right:15px;top:60px;flex-direction:column;background:#1d1022;padding:18px;border-radius:15px}.nav.open{display:flex}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.memory-grid{grid-template-columns:1fr 1fr}.music-list{grid-template-columns:1fr}.counter{gap:7px}.count{padding:17px 5px}.count span{font-size:.58rem}.topbar{padding:13px 18px}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.memory-grid{grid-template-columns:1fr 1fr}.memory,.memory img,.memory .placeholder{min-height:145px}}
+</style>
+</head>
+<body>
+<div id="backdrop"></div><div id="grain"></div><div class="hearts" id="hearts"></div>
+<div class="screen" id="gate">
+ <div class="login-card">
+  <div class="tiny">un espacio solo nuestro</div>
+  <div style="font-size:2.3rem;margin:12px">♡</div>
+  <h1>Hola, Melany</h1>
+  <p>Antes de entrar a este pequeño universo, hay dos cositas que solo tú sabes.</p>
+  <div class="field"><label for="who">Tu nombre</label><input id="who" autocomplete="off" placeholder="Escribe tu nombre"></div>
+  <div class="field"><label for="when">¿Qué día nos hicimos novios?</label><input id="when" placeholder="DD/MM/AAAA" autocomplete="off"></div>
+  <button class="primary" style="width:100%" onclick="enter()">Entrar a nuestro universo ♡</button>
+  <div class="error" id="gateError"></div>
+ </div>
+</div>
+<main id="site">
+ <header class="topbar"><div class="brand">M <span>♡</span> R</div><button class="menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button><nav class="nav"><a href="#carta">La carta</a><a href="#tiempo">Nuestro tiempo</a><a href="#razones">Razones</a><a href="#fotos">Recuerdos</a><a href="#canciones">Canciones</a><a href="#secreto">Secreto</a></nav></header>
+ <div class="hero"><div class="hero-inner"><div class="eyebrow">14 · 12 · 2025 — nuestro comienzo</div><h1>Mi lugar favorito<br><em>también tiene tu nombre.</em></h1><p>Melany, hice este rinconcito para guardar un poquito de lo que somos: nuestras ocurrencias, nuestros recuerdos y todo eso que a veces no sé decirte de frente.</p><div class="date-chip">Para mi pendejis, con cariño ♡</div></div><div class="scroll">DESLIZA DESPACIO ↓</div></div>
+ <section id="carta"><div class="section-head"><div class="tiny">palabras para ti</div><h2>Una carta sin apuro</h2><p>Porque hay cosas que merecen quedarse escritas.</p></div>
+  <article class="letter glass"><div class="salute">Mi pendejis,</div>
+   <p>Quién iba a decir que aquel 14 de diciembre de 2025 iba a convertirse en una fecha tan especial. Todavía recuerdo que te pedí ser mi novia con una carta y una flor roja. No fue algo enorme ni perfecto, pero fue nuestro comienzo, y por eso lo guardo con tanto cariño.</p>
+   <p>No te voy a mentir: desde el principio me encantaron tu belleza, tus buches y esa forma tan tuya de ser. Pero lo bonito es que, mientras pasan los días, voy encontrando más detalles que me hacen quererte.</p>
+   <p>Sé que a veces discutimos por cualquier cosa, que tenemos nuestros momentos y que no siempre pensamos igual. Pero incluso con nuestras diferencias, cada día encuentro nuevas razones para valorar lo que compartimos. Me encanta pasar tiempo contigo, visitarte y convertir hasta un día normal en un recuerdo nuestro.</p>
+   <p>Gracias por las risas, las ocurrencias, los momentos tranquilos y hasta por esas pequeñas historias que solo nosotros entendemos. No quiero que esta página sea una promesa exagerada: quiero que sea un recuerdo bonito de lo que estamos construyendo, un día a la vez.</p>
+   <p class="signature">Con cariño, tu pendejo ♡</p>
+  </article>
+ </section>
+ <section id="tiempo"><div class="section-head"><div class="tiny">desde aquel día</div><h2>El tiempo que llevamos</h2><p>Desde el 14 de diciembre de 2025, cada segundo suma una página más a nuestra historia.</p></div>
+  <div class="counter">
+   <div class="count glass"><strong id="days">—</strong><span>Días</span></div><div class="count glass"><strong id="hours">—</strong><span>Horas</span></div><div class="count glass"><strong id="minutes">—</strong><span>Minutos</span></div><div class="count glass"><strong id="seconds">—</strong><span>Segundos</span></div>
+  </div>
+ </section>
+ <section id="razones"><div class="section-head"><div class="tiny">pequeños detalles</div><h2>Razones por las que me encantas</h2><p>No son todas, porque seguro mañana encuentro otra.</p></div>
+  <div class="grid">
+   <div class="reason glass"><b>01 · Tus buches</b><p>Sí, tenían que estar aquí. No podía dejar fuera algo que me llamó la atención desde el principio.</p></div>
+   <div class="reason glass"><b>02 · Tu belleza</b><p>Hay algo en ti que me hace detenerme y pensar: qué bonita es mi pendejis.</p></div>
+   <div class="reason glass"><b>03 · Tu compañía</b><p>Pasar tiempo contigo hace que hasta los planes más sencillos se sientan especiales.</p></div>
+   <div class="reason glass"><b>04 · Tus ocurrencias</b><p>Tenemos momentos que, si los contamos, probablemente nadie los entienda como nosotros.</p></div>
+   <div class="reason glass"><b>05 · Lo que somos</b><p>No somos perfectos, pero tenemos nuestra propia manera de compartir y aprender.</p></div>
+   <div class="reason glass"><b>06 · Cada día</b><p>Siempre aparece un detalle nuevo que me recuerda por qué me gusta estar contigo.</p></div>
+  </div>
+ </section>
+ <section id="fotos"><div class="section-head"><div class="tiny">momentos que se quedan</div><h2>Nuestros recuerdos</h2><p>La foto de la playa será el fondo principal. Las demás tendrán su propio espacio en esta galería.</p></div>
+  <div class="memory-grid" id="gallery">
+   <div class="memory"><div class="placeholder">🌊<br>Tu foto de la playa irá aquí</div></div><div class="memory"><div class="placeholder">♡<br>Un recuerdo bonito</div></div><div class="memory"><div class="placeholder">✦<br>Otra foto de ustedes</div></div>
+  </div>
+  <div class="upload-panel glass"><b>Personaliza las fotos de la página</b><p>Selecciona primero la foto de Melany en la playa para el fondo. Después puedes elegir las otras fotos para la galería. Las imágenes se guardan en este navegador.</p>
+   <div class="field"><label for="bgUpload">Foto de la playa — fondo animado</label><input id="bgUpload" type="file" accept="image/*" onchange="setBackground(event)"></div>
+   <div class="field"><label for="galleryUpload">Las demás fotos — galería</label><input id="galleryUpload" type="file" accept="image/*" multiple onchange="setGallery(event)"></div>
+   <button class="primary" onclick="clearPhotos()">Quitar fotos guardadas</button>
+  </div>
+ </section>
+ <section id="canciones"><div class="section-head"><div class="tiny">la banda sonora</div><h2>Dos canciones, dos vibes</h2><p>Estas son las canciones que me dijiste que son especiales para ustedes.</p></div>
+  <div class="music-list">
+   <div class="track glass"><div class="disc"></div><div><h3>Las Avispas</h3><p>Juan Luis Guerra 4:40</p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Juan+Luis+Guerra+Las+Avispas+oficial">Escuchar canción ↗</a></div></div>
+   <div class="track glass"><div class="disc"></div><div><h3>JPN</h3><p>Álvaro Díaz</p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Alvaro+Diaz+JPN+oficial">Escuchar canción ↗</a></div></div>
+  </div>
+  <p class="small-note">Los enlaces te llevan a buscar las versiones oficiales; la página no reproduce ni copia las canciones.</p>
+ </section>
+ <section id="secreto"><div class="section-head"><div class="tiny">solo para quien sabe</div><h2>Nuestros secretos</h2><p>Hay recuerdos que no necesitan explicación.</p></div>
+  <div class="secret glass"><div class="lock">🔐</div><h3>Una pequeña puerta secreta</h3><p style="color:var(--muted)">Pista: el apodo que usamos.</p>
+   <div class="field"><input id="secretPass" placeholder="Escribe la contraseña" autocomplete="off"></div><button class="primary" onclick="unlockSecret()">Abrir sorpresa ♡</button>
+   <div class="error" id="secretError"></div><div id="secretReveal" class="reveal hidden">¿Te acuerdas de aquel regreso de la capital, pendejis? 🤭 Hay recuerdos que todavía nos sacan una sonrisa. Algunas historias son solamente nuestras, y esta página guarda una pequeña pista para que nunca se nos olvide. ❤️</div>
+  </div>
+ </section>
+ <footer>Hecho con cariño, para <strong>Melany</strong> · 14.12.2025 <div style="font-size:1.4rem;margin-top:10px">♡</div></footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+function enter(){
+ const name=$('who').value.trim().toLowerCase();
+ const date=$('when').value.trim().replaceAll('-','/');
+ const okName=['melany','melanie'].includes(name);
+ const okDate=['14/12/2025','14/12/25','2025/12/14'].includes(date);
+ if(okName&&okDate){$('gate').classList.add('hidden');$('site').style.display='block';document.body.style.overflowX='hidden';startCounter();spawnHearts();window.scrollTo(0,0)}
+ else $('gateError').textContent='Mmm… revisa tu nombre y nuestra fecha especial. ♡';
+}
+$('when').addEventListener('keydown',e=>{if(e.key==='Enter')enter()});$('who').addEventListener('keydown',e=>{if(e.key==='Enter')enter()});
+function startCounter(){
+ const start=new Date(2025,11,14,0,0,0);
+ function tick(){let ms=Math.max(0,Date.now()-start.getTime());let total=Math.floor(ms/1000);$('days').textContent=Math.floor(total/86400);$('hours').textContent=Math.floor(total%86400/3600);$('minutes').textContent=Math.floor(total%3600/60);$('seconds').textContent=total%60}
+ tick();setInterval(tick,1000);
+}
+function unlockSecret(){if($('secretPass').value.trim().toLowerCase()==='pendjis'||$('secretPass').value.trim().toLowerCase()==='pendejis'){$('secretReveal').classList.remove('hidden');$('secretError').textContent='';}else $('secretError').textContent='Esa no es la palabra secreta, pendejis. 🤭'}
+$('secretPass').addEventListener('keydown',e=>{if(e.key==='Enter')unlockSecret()});
+function spawnHearts(){setInterval(()=>{const h=document.createElement('span');h.className='float-heart';h.textContent=['♡','♥','✦'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'%';h.style.fontSize=(12+Math.random()*18)+'px';h.style.animationDuration=(9+Math.random()*8)+'s';$('hearts').appendChild(h);setTimeout(()=>h.remove(),18000)},850)}
+function readImage(file,maxW=1500){return new Promise((resolve,reject)=>{const img=new Image(),url=URL.createObjectURL(file);img.onload=()=>{const scale=Math.min(1,maxW/img.width);const c=document.createElement('canvas');c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);resolve(c.toDataURL('image/jpeg',.78))};img.onerror=reject;img.src=url})}
+async function setBackground(e){const f=e.target.files[0];if(!f)return;try{const data=await readImage(f,1700);$('backdrop').style.backgroundImage=`url("${data}")`;localStorage.setItem('melanyBeachBg',data)}catch(err){alert('No se pudo cargar esa imagen. Prueba con otra.')} }
+async function setGallery(e){const files=[...e.target.files].slice(0,9);if(!files.length)return;try{const imgs=await Promise.all(files.map(f=>readImage(f,1100)));localStorage.setItem('melanyGallery',JSON.stringify(imgs));renderGallery(imgs)}catch(err){alert('No se pudieron cargar todas las fotos. Prueba con imágenes más pequeñas.')} }
+function renderGallery(imgs){$('gallery').innerHTML='';imgs.forEach((src,i)=>{const d=document.createElement('div');d.className='memory';const im=document.createElement('img');im.src=src;im.alt='Recuerdo '+(i+1);d.appendChild(im);$('gallery').appendChild(d)})}
+function clearPhotos(){localStorage.removeItem('melanyBeachBg');localStorage.removeItem('melanyGallery');$('backdrop').style.backgroundImage='';$('gallery').innerHTML='<div class="memory"><div class="placeholder">🌊<br>Tu foto de la playa irá aquí</div></div><div class="memory"><div class="placeholder">♡<br>Un recuerdo bonito</div></div><div class="memory"><div class="placeholder">✦<br>Otra foto de ustedes</div></div>'}
+try{const bg=localStorage.getItem('melanyBeachBg');if(bg)$('backdrop').style.backgroundImage=`url("${bg}")`;const gal=JSON.parse(localStorage.getItem('melanyGallery')||'[]');if(gal.length)renderGallery(gal)}catch(e){}
+</script>
+</body></html>
